@@ -6,7 +6,9 @@
 package fr.esipe.creteil.services;
 
 import fr.esipe.creteil.accounts.dtos.AccountDTO;
+import fr.esipe.creteil.accounts.dtos.TransactionDetailDTO;
 import fr.esipe.creteil.accounts.enums.AccountType;
+import fr.esipe.creteil.exceptions.UserException;
 import fr.esipe.creteil.users.dtos.UserDTO;
 import java.util.List;
 
@@ -20,10 +22,12 @@ public interface IUserService {
     
     public UserDTO updateUser(String  userID, String address, String numberPhone);
     
-    public UserDTO getUser(String userID);
+    public UserDTO getUser(String userID)  throws UserException;
     
-    public List<UserDTO> getUser(String nom, String prenom);
+    public UserDTO getUserByLastName(String lastname)  throws UserException;
     
     public AccountDTO createAccount(String userID, AccountType accountType);
+ 
     
+    public List<TransactionDetailDTO> getAllTransactions(String userID)  throws UserException;
 }

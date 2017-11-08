@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<?> get(@PathVariable(value = "id") @Valid @Pattern(regexp = "[0-9]{1,}") String idUser) {
+    public ResponseEntity<?> getUserById(@PathVariable(value = "id") @Valid @Pattern(regexp = "[0-9]{1,}") String idUser) {
         try {
             final UserDTO userDto = userService.getUserById(idUser);
             return new ResponseEntity<>(userDto, HttpStatus.OK);
@@ -38,7 +38,7 @@ public class UserController {
     
     
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<?> getAllUsers(@RequestParam(value = "lastName", required = true) String lastName) {
+    public ResponseEntity<?> getUserByLastName(@RequestParam(value = "lastName", required = true) String lastName) {
         try {
             final UserDTO userDto = userService.getUserByLastName(lastName);
             return new ResponseEntity<>(userDto, HttpStatus.OK);
