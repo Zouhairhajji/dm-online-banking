@@ -1,27 +1,24 @@
-<?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>fr.esipe.creteil</groupId>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>client-management-services</artifactId>
+    <artifactId>client-services</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>client-management-services</name>
+    <name>client-services</name>
 
     <parent>
         <groupId>fr.esipe.creteil</groupId>
         <artifactId>dm-online-banking</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    
 
     <dependencies>
         <!-- Spring Boot Starters -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         
         <!-- swagger -->
@@ -37,23 +34,12 @@
         </dependency>
         
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-
-
-        <!-- utils -->
-        <dependency>
-            <groupId>fr.esipe.creteil</groupId>
-            <artifactId>aspectj-aop-utils</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        
-        <!-- models -->
-        <dependency>
             <groupId>fr.esipe.creteil</groupId>
             <artifactId>client-models</artifactId>
-            <version>${project.version}</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+
+
 </project>
