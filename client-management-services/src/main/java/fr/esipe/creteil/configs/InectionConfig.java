@@ -10,7 +10,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- *
+ * //Gokan TODO: Inutile de dupliquer avec celui de rest-client-utils !
+ * //Gokan TODO: En temps normal cela devrait meme lancer une exception mais visiblement tu n'as
+ * //Gokan TODO: pas importé cette dépendance dans ce module
  * @author zouhairhajji
  */
 @Configuration
